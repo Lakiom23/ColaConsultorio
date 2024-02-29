@@ -94,7 +94,7 @@ namespace ColaConsultorio
         public ColaNormal()
         {
         }
-
+        //ingresar paciente nuevo 
         public void Push(Paciente paciente)
         {
 
@@ -119,6 +119,29 @@ namespace ColaConsultorio
             }
 
             contador++;
+        }
+        //metodo para atender al paciente 
+        public Paciente pop()
+        {
+            if (vacia)
+            {
+                Console.WriteLine("La Cola esta vacia no hay nadie aquien atender ");
+                return null;
+            }
+            // verificar si hace falata eliminar ya que no estoy seguro si se trabaja igual que con punteros
+            
+            Paciente Atender = inicio.paciente;
+            Reorganizar();
+
+            contador--;
+            return Atender;
+        }
+
+        //reorganiza la cola una vez atendido un paciente 
+        public void Reorganizar()
+        {
+            inicio = inicio.siguiente;
+            if (vacia()) fin = null;
         }
 
 
