@@ -1,0 +1,15 @@
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\bin\Debug\net8.0\ColaConsultorio.exe
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\bin\Debug\net8.0\ColaConsultorio.deps.json
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\bin\Debug\net8.0\ColaConsultorio.runtimeconfig.json
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\bin\Debug\net8.0\ColaConsultorio.dll
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\bin\Debug\net8.0\ColaConsultorio.pdb
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.AssemblyInfoInputs.cache
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.AssemblyInfo.cs
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.csproj.CoreCompileInputs.cache
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.sourcelink.json
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.dll
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\refint\ColaConsultorio.dll
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.pdb
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ColaConsultorio.genruntimeconfig.cache
+C:\Users\Anl-Desarrollo J\Desktop\ColaConsultorio\ColaConsultorio\obj\Debug\net8.0\ref\ColaConsultorio.dll
