@@ -30,8 +30,7 @@ namespace ColaConsultorio
             public Datos Datos { get => datos; set => datos = value; }
         }
 
-        //clase Paciente
-
+        //Clase Paciente
         public class Paciente : Persona
         {
             private int prioridad;

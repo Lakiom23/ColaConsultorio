@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anl-Desarrollo J\\Desktop\\ColaConsultorio\\ColaConsultorio\\ColaConsultorio.csproj": {}
+    "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anl-Desarrollo J\\Desktop\\ColaConsultorio\\ColaConsultorio\\ColaConsultorio.csproj": {
+    "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anl-Desarrollo J\\Desktop\\ColaConsultorio\\ColaConsultorio\\ColaConsultorio.csproj",
+        "projectUniqueName": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj",
         "projectName": "ColaConsultorio",
-        "projectPath": "C:\\Users\\Anl-Desarrollo J\\Desktop\\ColaConsultorio\\ColaConsultorio\\ColaConsultorio.csproj",
-        "packagesPath": "C:\\Users\\Anl-Desarrollo J\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anl-Desarrollo J\\Desktop\\ColaConsultorio\\ColaConsultorio\\obj\\",
+        "projectPath": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj",
+        "packagesPath": "/home/figueroa/.nuget/packages/",
+        "outputPath": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Anl-Desarrollo J\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/figueroa/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
