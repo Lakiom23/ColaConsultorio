@@ -1,3 +1,5 @@
+namespace ColaConsultorio
+{       
        //Nodo Paciente
         public class NodoPaciente
         {
@@ -118,4 +120,4 @@
 
 
 
-        }
+        }}

@@ -1,3 +1,6 @@
+namespace ColaConsultorio
+{
+
 //Class Hospital
 public class Hospital
 {
@@ -89,4 +92,4 @@ public class Hospital
 
     }
 
-}
+}}

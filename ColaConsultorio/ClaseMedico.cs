@@ -1,3 +1,5 @@
+namespace ColaConsultorio
+{
 public class Medico : Persona
 {
     private string especialidad;
@@ -62,4 +64,4 @@ public class Medico : Persona
             Console.WriteLine("No hay paciente siendo atendido, el medico se encuentra disponible");
         }
     }
-}
+}}

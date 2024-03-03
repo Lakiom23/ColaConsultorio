@@ -1,3 +1,5 @@
+namespace ColaConsultorio
+{
 //Clase Paciente
 public class Paciente : Persona
 {
@@ -13,4 +15,4 @@ public class Paciente : Persona
         get { return prioridad; }
         set { prioridad = value; }
     }
-}
+}}

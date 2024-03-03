@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj": {}
+    "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj": {}
   },
   "projects": {
-    "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj": {
+    "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj",
+        "projectUniqueName": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj",
         "projectName": "ColaConsultorio",
-        "projectPath": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj",
+        "projectPath": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio.csproj",
         "packagesPath": "/home/figueroa/.nuget/packages/",
-        "outputPath": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/ColaConsultorio/obj/",
+        "outputPath": "/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/figueroa/.nuget/NuGet/NuGet.Config"

@@ -2,10 +2,8 @@ using System;
 
 namespace ColaConsultorio
 {
-
     class Program
     {
-
 
         static void Main(string[] args)
         {

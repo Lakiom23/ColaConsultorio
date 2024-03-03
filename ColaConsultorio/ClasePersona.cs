@@ -1,3 +1,5 @@
+namespace ColaConsultorio
+{
 // Clase Persona
 public class Persona
 {
@@ -40,4 +42,4 @@ public class Persona
         set { cedula = value; }
     }
 
-}
+}}
