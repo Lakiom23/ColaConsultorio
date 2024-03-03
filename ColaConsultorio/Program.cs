@@ -242,6 +242,81 @@ namespace ColaConsultorio
             internal Cola[] Adultos { get => adultos; set => adultos = value; }
             internal Cola[] Ninios1 { get => Ninios; set => Ninios = value; }
 
+             public void InsertarPaciente()
+            {
+                Paciente nuevo;
+                Random random = new Random();
+                int prioridad = random.Next(0, 6);
+                int Edad = random.Next(1, 150);
+
+
+                Console.WriteLine("Ingrese los datos del Paciente ");
+                Console.WriteLine("Nombre : "); 
+                Console.WriteLine("Apellido : "); 
+                Console.WriteLine("C.I : "); 
+                Console.WriteLine("Edad : "); 
+                Console.Write("Prioridad : ");
+
+            }
+            public void AtenderPaciente()
+            {
+
+            }
+
+            public void GenerarReporte()
+            {
+
+            }
+
+
+            public void Menu()
+            {
+                int opc = 0;
+
+                do
+                {
+
+                    Console.WriteLine("Consultorio medico ");
+                    Console.WriteLine("1.Nuevo Paciente");
+                    Console.WriteLine("2.Atender Pacientes");
+                    Console.WriteLine("3.Generar reporte ");
+                    Console.WriteLine("4.Cambio de doctor");
+                    Console.WriteLine("5.CERRAR SISTEMA ");
+                    opc = Convert.ToByte(Console.ReadLine());
+
+
+
+                    switch (opc)
+                    {
+                        case 1 :
+                            InsertarPaciente();
+                            Console.ReadKey();
+                            break;
+
+                        case 2:
+                            AtenderPaciente();
+                            Console.ReadKey();
+                            break;
+
+                        case 3:
+                            GenerarReporte();
+                            Console.ReadKey();
+                            break;
+                    }
+
+
+
+
+                } while (opc != 4);
+
+            
+            
+            
+            
+            
+            
+            }
+
 
 
         }
