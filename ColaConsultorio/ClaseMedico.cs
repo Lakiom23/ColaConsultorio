@@ -1,7 +1,7 @@
 public class Medico : Persona
 {
     private string especialidad;
-    private Paciente paciente;
+    private Paciente? paciente;
 
     public Medico(string nombre, string apellido, int edad, int cedula, string especialidad) : base(nombre, apellido, edad, cedula)
     {
@@ -11,8 +11,8 @@ public class Medico : Persona
 
     public string Especialidad1
     {
-        get { return Especialidad; }
-        set { Especialidad = value; }
+        get { return especialidad; }
+        set { especialidad = value; }
     }
 
     internal Paciente Paciente
@@ -21,11 +21,11 @@ public class Medico : Persona
         set { paciente = value; }
     }
 
-    public void AtenderPaciente(Paciente pacient)
+    public void AtenderPaciente(Paciente paciente)
     {
-        if (Paciente == null)
+        if (this.paciente == null)
         {
-            Paciente = pacient;
+            this.paciente = paciente;
             Console.WriteLine("Paciente ha entrado al consultorio");
         }
         else
@@ -36,9 +36,9 @@ public class Medico : Persona
 
     public void PacienteAtendido()
     {
-        if (Paciente != null)
+        if (this.paciente != null)
         {
-            Paciente = null;
+            this.paciente = null;
             Console.WriteLine("Paciente ha sido atendido, medico disponible");
         }
         else
