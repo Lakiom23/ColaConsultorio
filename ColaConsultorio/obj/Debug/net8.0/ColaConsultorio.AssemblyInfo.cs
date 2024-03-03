@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ColaConsultorio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+813d9e8b95b3ac11bea07118509aa61a4385dce4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c72fb429883a1a4dce70611ae9c89650e95e4b08")]
 [assembly: System.Reflection.AssemblyProductAttribute("ColaConsultorio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ColaConsultorio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

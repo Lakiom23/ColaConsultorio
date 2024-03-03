@@ -6,21 +6,7 @@ namespace ColaConsultorio
     class Program
     {
 
-        
-        //Clase Paciente
-        public class Paciente : Persona
-        {
-            private int prioridad;
-
-            public Paciente(Datos dato, int priori) : base(dato)
-            {
-                Prioridad = priori;
-            }
-
-            public int Prioridad { get => prioridad; set => prioridad = value; }
-        }
-        //class medico;
-
+        //Clase Medico;
         public class Medico : Persona
         {
             private string Especialidad;
@@ -29,7 +15,7 @@ namespace ColaConsultorio
 
             public Medico(Datos dato, string especiali) : base(dato)
             {
-                Especialidad1 = especiali;
+                Especialidad = especiali;
                 Paciente = null;
             }
             public string Especialidad1 { get => Especialidad; set => Especialidad = value; }
