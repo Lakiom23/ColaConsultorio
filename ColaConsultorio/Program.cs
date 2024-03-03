@@ -6,67 +6,6 @@ namespace ColaConsultorio
     class Program
     {
 
-        //Clase Medico;
-        public class Medico : Persona
-        {
-            private string Especialidad;
-            private Paciente paciente;
-
-
-            public Medico(Datos dato, string especiali) : base(dato)
-            {
-                Especialidad = especiali;
-                Paciente = null;
-            }
-            public string Especialidad1 { get => Especialidad; set => Especialidad = value; }
-            internal Paciente Paciente { get => paciente; set => paciente = value; }
-
-            public void atenderPaciente(Paciente pacient)
-            {
-                if (Paciente == null)
-                {
-                    Paciente = pacient;
-                    Console.WriteLine("Paciente ha entrado al consultorio");
-                }
-                else
-                {
-                    Console.WriteLine("El medico se encuentra ocupado con otro paciente");
-                }
-            }
-
-            public void PacienteAtendido()
-            {
-                if (Paciente != null)
-                {
-                    Paciente = null;
-                    Console.WriteLine("Paciente ha sido atendido, mnedico disponible");
-                }
-                else
-                {
-                    Console.WriteLine("No hay paciente siendo atendido, El medico se encuentra Disponible ");
-                }
-            }
-
-            public void MostraPaciente()
-            {
-                if (Paciente != null)
-                {
-                    Paciente = null;
-                    Console.WriteLine("Paciente siendo atendido ");
-                    Console.WriteLine($"Nombre : {Paciente.Datos.Nombre} ");
-                    Console.WriteLine($"Apellido : {Paciente.Datos.Apellido} ");
-                    Console.WriteLine($"Edad : {Paciente.Datos.edad} ");
-                    Console.WriteLine($"C.I : {Paciente.Datos.Ci} ");
-                }
-                else
-                {
-                    Console.WriteLine("No hay paciente siendo atendido, El medico se encuentra Disponible ");
-                }
-            }
-
-
-        }
-
         //NODO PERSONA
         public class NodoP
         {
