@@ -6,30 +6,7 @@ namespace ColaConsultorio
     class Program
     {
 
-        //Datos a guardar
-        public struct Datos
-        {
-            public string Nombre;
-            public string Apellido;
-            public int edad;
-            public int Ci;
-
-        }
-
-        // clase persona
-        public class Persona
-        {
-            private Datos datos;
-
-
-            public Persona(Datos dato)
-            {
-                Datos = dato;
-            }
-
-            public Datos Datos { get => datos; set => datos = value; }
-        }
-
+        
         //Clase Paciente
         public class Paciente : Persona
         {
@@ -90,10 +67,10 @@ namespace ColaConsultorio
                 {
                     Paciente = null;
                     Console.WriteLine("Paciente siendo atendido ");
-                    Console.WriteLine($"Nombre : { Paciente.Datos.Nombre } ");
-                    Console.WriteLine($"Apellido : { Paciente.Datos.Apellido } ");
-                    Console.WriteLine($"Edad : { Paciente.Datos.edad } ");
-                    Console.WriteLine($"C.I : { Paciente.Datos.Ci } ");
+                    Console.WriteLine($"Nombre : {Paciente.Datos.Nombre} ");
+                    Console.WriteLine($"Apellido : {Paciente.Datos.Apellido} ");
+                    Console.WriteLine($"Edad : {Paciente.Datos.edad} ");
+                    Console.WriteLine($"C.I : {Paciente.Datos.Ci} ");
                 }
                 else
                 {
@@ -211,10 +188,10 @@ namespace ColaConsultorio
                     while (nuevo != null)
                     {
                         Console.WriteLine("Pacientes en cola ");
-                        Console.WriteLine($"Nombre : { nuevo.Paciente.Datos.Nombre } ");
-                        Console.WriteLine($"Apellido : { nuevo.Paciente.Datos.Apellido } ");
-                        Console.WriteLine($"Edad : { nuevo.Paciente.Datos.edad } ");
-                        Console.WriteLine($"C.I : { nuevo.Paciente.Datos.Ci } ");
+                        Console.WriteLine($"Nombre : {nuevo.Paciente.Datos.Nombre} ");
+                        Console.WriteLine($"Apellido : {nuevo.Paciente.Datos.Apellido} ");
+                        Console.WriteLine($"Edad : {nuevo.Paciente.Datos.edad} ");
+                        Console.WriteLine($"C.I : {nuevo.Paciente.Datos.Ci} ");
                         nuevo = nuevo.Siguiente;
                     }
                 }
@@ -249,17 +226,17 @@ namespace ColaConsultorio
 
             public Hospital()
             {
-                for(int i= 0 ; i > 5 ; i++)
+                for (int i = 0; i > 5; i++)
                 {
-                    Adultos[i] = new Cola() ;
-                    Ninios1[i] = new Cola() ;
+                    Adultos[i] = new Cola();
+                    Ninios1[i] = new Cola();
                     General = null;
                     Pediatria1 = null;
 
                 }
             }
 
-         
+
             internal Medico General1 { get => General; set => General = value; }
             internal Medico Pediatria1 { get => Pediatria; set => Pediatria = value; }
             internal Cola[] Adultos { get => adultos; set => adultos = value; }
@@ -273,7 +250,7 @@ namespace ColaConsultorio
 
         static void Main(string[] args)
         {
-            Cola cola = new Cola(); 
+            Cola cola = new Cola();
             Datos datomedico = new Datos()
             {
                 Nombre = "juan",
