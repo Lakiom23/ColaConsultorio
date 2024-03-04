@@ -48,7 +48,7 @@ namespace ColaConsultorio
 
             Paciente pacienteNuevo = new Paciente(nombre, apellido, cedula, edad, prioridad);
 
-            if (pacienteNuevo.Edad <15){
+            if (pacienteNuevo.Edad < 15){
                 ninios[prioridad].Push(pacienteNuevo);
             }else{
                 adultos[prioridad].Push(pacienteNuevo);
@@ -58,6 +58,7 @@ namespace ColaConsultorio
 
         public void AtenderPaciente()
         {
+            
 
         }
 
@@ -77,7 +78,6 @@ namespace ColaConsultorio
                 Console.WriteLine("1.Nuevo Paciente");
                 Console.WriteLine("2.Atender Pacientes");
                 Console.WriteLine("3.Generar reporte ");
-                Console.WriteLine("4.Cambio de doctor");
                 Console.WriteLine("5.CERRAR SISTEMA ");
 
                 opcion = Convert.ToByte(Console.ReadLine());

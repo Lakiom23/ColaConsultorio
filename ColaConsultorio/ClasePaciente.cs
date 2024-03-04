@@ -1,18 +1,19 @@
 namespace ColaConsultorio
 {
-//Clase Paciente
-public class Paciente : Persona
-{
-    private int prioridad;
-
-    public Paciente(string nombre, string apellido, int edad, int cedula, int prioridad) : base(nombre, apellido, edad, cedula)
+    //Clase Paciente
+    public class Paciente : Persona
     {
-        this.prioridad = prioridad;
-    }
+        private int prioridad;
 
-    public int Prioridad
-    {
-        get { return prioridad; }
-        set { prioridad = value; }
+        public Paciente(string nombre, string apellido, int edad, int cedula, int prioridad) : base(nombre, apellido, edad, cedula)
+        {
+            this.prioridad = prioridad;
+        }
+
+        public int Prioridad
+        {
+            get { return prioridad; }
+            set { prioridad = value; }
+        }
     }
-}}
+}

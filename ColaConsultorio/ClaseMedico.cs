@@ -11,7 +11,7 @@ public class Medico : Persona
         this.paciente = null;
     }
 
-    public string Especialidad1
+    public string Especialidad
     {
         get { return especialidad; }
         set { especialidad = value; }

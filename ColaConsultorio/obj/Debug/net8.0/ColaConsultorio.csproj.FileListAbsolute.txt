@@ -36,3 +36,10 @@ C:/Users/Anl-Desarrollo J/Desktop/ColaConsultorio/ColaConsultorio/obj/Debug/net8
 /home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/obj/Debug/net8.0/ColaConsultorio.dll
 /home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/obj/Debug/net8.0/refint/ColaConsultorio.dll
 /home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/obj/Debug/net8.0/ColaConsultorio.pdb
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/bin/Debug/net8.0/ColaConsultorio
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/bin/Debug/net8.0/ColaConsultorio.deps.json
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/bin/Debug/net8.0/ColaConsultorio.runtimeconfig.json
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/bin/Debug/net8.0/ColaConsultorio.dll
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/bin/Debug/net8.0/ColaConsultorio.pdb
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/obj/Debug/net8.0/ColaConsultorio.genruntimeconfig.cache
+/home/figueroa/Escritorio/ColaConsultorio/ColaConsultorio/obj/Debug/net8.0/ref/ColaConsultorio.dll
