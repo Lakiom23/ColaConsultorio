@@ -7,22 +7,22 @@ namespace ColaConsultorio
 
         static void Main(string[] args)
         {
-            Cola cola = new Cola();
+            ColaPacientes cola = new ColaPacientes();
 
-            Medico medico = new Medico(nombre = "Juan",
-                                    apellido = "Lopez",
-                                    edad = 34,
-                                    Cedula = 336345,
-                                    "pediatria"
+            Medico medico = new Medico("Juan",
+                                        "Lopez",
+                                        34,
+                                        336345,
+                                        "pediatria"
                                     );
 
 
-            Paciente paciente = new Paciente(nombre = "Pedro",
-                                            apellido = "Sanchez",
-                                            edad = 3,
-                                            cedula = 336345,
-                                            prioridad = 1
-                                            );
+            Paciente paciente = new Paciente("Pedro",
+                                            "Sanchez",
+                                            3,
+                                            336345,
+                                            1
+                                        );
 
             medico.PacienteAtendido();
             medico.AtenderPaciente(paciente);

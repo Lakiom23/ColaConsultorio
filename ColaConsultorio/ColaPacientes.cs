@@ -1,6 +1,6 @@
 namespace ColaConsultorio
 {       
-       //Nodo Paciente
+        //Nodo Paciente
         public class NodoPaciente
         {
             private Paciente? paciente;
@@ -72,7 +72,7 @@ namespace ColaConsultorio
                 Contador++;
             }
             //metodo para atender al paciente 
-            public Paciente pop()
+            public Paciente Pop()
             {
                 if (vacia())
                 {
@@ -95,7 +95,7 @@ namespace ColaConsultorio
                 if (vacia()) fin = null;
             }
 
-            public void Mostra()
+            public void Mostrar()
             {
                 NodoPaciente nuevo = inicio;
                 if (vacia())
