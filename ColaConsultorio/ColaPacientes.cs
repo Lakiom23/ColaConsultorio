@@ -113,14 +113,11 @@ namespace ColaConsultorio
                     Console.WriteLine($"Nombre : {nuevo.Paciente.Nombre} ");
                     Console.WriteLine($"Apellido : {nuevo.Paciente.Apellido} ");
                     Console.WriteLine($"Edad : {nuevo.Paciente.Edad} ");
-                    Console.WriteLine($"C.I : {nuevo.Paciente.Cedula} ");
+                    Console.WriteLine($"Cedula : {nuevo.Paciente.Cedula} ");
                     Console.WriteLine($"--------------------------------------");
                     nuevo = nuevo.Siguiente;
                 }
             }
-
-
         }
-
     }
 }

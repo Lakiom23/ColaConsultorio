@@ -4,9 +4,12 @@ namespace ColaConsultorio
 {
     class Program
     {
-
         static void Main(string[] args)
         {
+            Hospital hospital = new Hospital();
+            hospital.Menu();
+
+            /*
             ColaPacientes cola = new ColaPacientes();
 
             Medico medico = new Medico("Juan",
@@ -34,6 +37,8 @@ namespace ColaConsultorio
             cola.Mostrar();
             cola.Pop();
             cola.Mostrar();
+        */
+        
         }
     }
 }
