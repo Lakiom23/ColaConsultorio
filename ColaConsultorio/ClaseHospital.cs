@@ -18,8 +18,8 @@ namespace ColaConsultorio
                 ninios[i] = new ColaPacientes();
                 
             }
-             general = null;
-             pediatra = null;
+               general= new Medico("Lenin","Figeroa",23, 23215546, "General" );
+               pediatra = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
         }
 
         //Getters y Setters
