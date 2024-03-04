@@ -12,7 +12,7 @@ namespace ColaConsultorio
         //Constructor
         public Hospital()
         {
-            for (int i = 0; i > 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 adultos[i] = new ColaPacientes();
                 ninios[i] = new ColaPacientes();
