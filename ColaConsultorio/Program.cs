@@ -6,10 +6,6 @@ namespace ColaConsultorio
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Hospital hospital = new Hospital();
-            hospital.Menu();
-
             /*
             ColaPacientes cola = new ColaPacientes();
 
@@ -39,12 +35,10 @@ namespace ColaConsultorio
             cola.Pop();
             cola.Mostrar();
         */
-        
-=======
-                Hospital consultorio = new Hospital();
-consultorio.Menu();
-Console.ReadKey();
->>>>>>> d2903c374903769cf5e0c0ef4aaa923b64c49c65
+
+            Hospital consultorio = new Hospital();
+            consultorio.Menu();
+            Console.ReadKey();
         }
     }
 }
