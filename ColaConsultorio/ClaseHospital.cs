@@ -75,6 +75,41 @@ namespace ColaConsultorio
 
         public void GenerarReporte()
         {
+            
+                Console.WriteLine("Reporte Medico actual ");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("Medicos General");
+                general.MostrarPaciente();
+                Console.WriteLine("Medicos Pediatra");
+                pediatra.MostrarPaciente();
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("Adultos ");
+
+
+                for(int i = 0;i < 5;i++)
+                {
+                    if (i == 0) Console.WriteLine(" Consulta general  ");
+                    if (i == 1) Console.WriteLine(" Accidentes Aparatosos ");
+                    if (i == 2) Console.WriteLine(" Infartos ");
+                    if (i == 3) Console.WriteLine(" Afeccion Respiratoria ");
+                    if (i == 4) Console.WriteLine(" Partos  ");
+                    Adultos[i].Mostrar();
+                
+                }
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("Ninios ");
+                for (int i = 0; i < 5; i++)
+                {
+                    if (i == 0) Console.WriteLine(" Consulta general  ");
+                    if (i == 1) Console.WriteLine(" Accidentes Aparatosos ");
+                    if (i == 2) Console.WriteLine(" Infartos ");
+                    if (i == 3) Console.WriteLine(" Afeccion Respiratoria ");
+                    if (i == 4) Console.WriteLine(" Partos  ");
+                   Ninios[i].Mostrar();
+
+                }
+
+                Console.WriteLine("-------------------------------------");
 
         }
 
