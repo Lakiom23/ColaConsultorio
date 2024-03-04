@@ -16,9 +16,10 @@ namespace ColaConsultorio
             {
                 adultos[i] = new ColaPacientes();
                 ninios[i] = new ColaPacientes();
-                general = null;
-                pediatra = null;
+                
             }
+             general = null;
+             pediatra = null;
         }
 
         //Getters y Setters
