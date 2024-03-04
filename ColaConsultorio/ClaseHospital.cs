@@ -78,7 +78,7 @@ namespace ColaConsultorio
                 Console.WriteLine("1.Nuevo Paciente");
                 Console.WriteLine("2.Atender Pacientes");
                 Console.WriteLine("3.Generar reporte ");
-                Console.WriteLine("5.CERRAR SISTEMA ");
+                Console.WriteLine("4.CERRAR SISTEMA ");
 
                 opcion = Convert.ToByte(Console.ReadLine());
 
