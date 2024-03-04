@@ -38,10 +38,12 @@ namespace ColaConsultorio
             tamanio = 10;
             contador = 0;
         }
+
         public bool Vacia()
         {
-            return Inicio == null;
+            return inicio == null;
         }
+
         public bool Llena()
         {
             return contador >= tamanio;
@@ -50,31 +52,35 @@ namespace ColaConsultorio
         //ingresar paciente nuevo 
         public void Push(Paciente paciente)
         {
-
             NodoPaciente nuevoPaciente = new NodoPaciente(paciente);
             if (Llena())
             {
-                Console.WriteLine("Cola Llena, de momento no se puede ingresar mas pacientes en colsultorio");
+                Console.WriteLine("Cola Llena, de momento no se puede ingresar mas pacientes en consultorio");
                 return;
             }
             if (Vacia())
             {
-                Inicio = nuevoPaciente;
-                Fin = nuevoPaciente;
-
+                inicio = nuevoPaciente;
+                fin = nuevoPaciente;
                 Console.WriteLine("Paciente agregado a la Cola");
                 return;
-
             }
             else
             {
-                Fin.Siguiente = nuevoPaciente;
-                Fin = nuevoPaciente;
+                fin.Siguiente = nuevoPaciente;
+                fin = nuevoPaciente;
             }
-
-            Contador++;
+            contador++;
         }
-        //metodo para atender al paciente 
+
+        //reorganiza la cola una vez atendido un paciente 
+        public void Reorganizar()
+        {
+            inicio = inicio.Siguiente;
+            if (Vacia()) fin = null;
+        }
+
+        //Metodo para atender al paciente 
         public Paciente Pop()
         {
             if (Vacia())
@@ -84,18 +90,11 @@ namespace ColaConsultorio
             }
             // verificar si hace falata eliminar ya que no estoy seguro si se trabaja igual que con punteros
 
-            Paciente Atender = Inicio.Paciente;
+            Paciente paciente = Inicio.Paciente;
             Reorganizar();
 
             Contador--;
-            return Atender;
-        }
-
-        //reorganiza la cola una vez atendido un paciente 
-        public void Reorganizar()
-        {
-            Inicio = Inicio.Siguiente;
-            if (Vacia()) fin = null;
+            return paciente;
         }
 
         public void Mostrar()
@@ -107,21 +106,21 @@ namespace ColaConsultorio
             }
             else
             {
+                Console.WriteLine("Pacientes en cola ");
                 while (nuevo != null)
                 {
-                    Console.WriteLine("Pacientes en cola ");
+                    Console.WriteLine($"--------------------------------------");
                     Console.WriteLine($"Nombre : {nuevo.Paciente.Nombre} ");
                     Console.WriteLine($"Apellido : {nuevo.Paciente.Apellido} ");
                     Console.WriteLine($"Edad : {nuevo.Paciente.Edad} ");
                     Console.WriteLine($"C.I : {nuevo.Paciente.Cedula} ");
+                    Console.WriteLine($"--------------------------------------");
                     nuevo = nuevo.Siguiente;
                 }
             }
 
 
         }
-
-
 
     }
 }
