@@ -34,7 +34,7 @@ namespace ColaConsultorio
         public ColaPacientes()
         {
             inicio = null;
-            final = null;
+            fin = null;
             tamanio = 10;
             contador = 0;
         }
@@ -52,12 +52,12 @@ namespace ColaConsultorio
         {
 
             NodoPaciente nuevoPaciente = new NodoPaciente(paciente);
-            if (llena())
+            if (Llena())
             {
                 Console.WriteLine("Cola Llena, de momento no se puede ingresar mas pacientes en colsultorio");
                 return;
             }
-            if (vacia())
+            if (Vacia())
             {
                 Inicio = nuevoPaciente;
                 Fin = nuevoPaciente;
@@ -77,7 +77,7 @@ namespace ColaConsultorio
         //metodo para atender al paciente 
         public Paciente Pop()
         {
-            if (vacia())
+            if (Vacia())
             {
                 Console.WriteLine("La Cola esta vacia no hay nadie aquien atender ");
                 return null;
@@ -95,13 +95,13 @@ namespace ColaConsultorio
         public void Reorganizar()
         {
             Inicio = Inicio.Siguiente;
-            if (vacia()) fin = null;
+            if (Vacia()) fin = null;
         }
 
         public void Mostrar()
         {
             NodoPaciente nuevo = inicio;
-            if (vacia())
+            if (Vacia())
             {
                 Console.WriteLine("Actualmente no hay pacientes en esta cola");
             }
