@@ -61,12 +61,12 @@ namespace ColaConsultorio
              general.PacienteAtendido();
              pediatra.PacienteAtendido();
              
-               for( int i = 0; general.Paciente==null; i++)
+               for( int i = 0; general.Paciente==null || i < 5; i++)
                 {
                     general.AtenderPaciente(Adultos[i].Pop());
                 }
 
-                for (int i = 0; pediatra.Paciente == null; i++)
+                for (int i = 0; pediatra.Paciente == null|| i < 5; i++)
                 {
                     pediatra.AtenderPaciente(Ninios[i].Pop());
                 }
