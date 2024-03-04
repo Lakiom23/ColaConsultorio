@@ -32,7 +32,7 @@ namespace ColaConsultorio
         public void InsertarPaciente()
         {
             Random random = new Random();
-            int prioridad = random.Next(0, 6);
+            int prioridad = random.Next(0, 5);
             int edad = random.Next(1, 100);
 
             Console.WriteLine("Ingrese los datos del Paciente ");
