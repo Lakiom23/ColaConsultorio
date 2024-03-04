@@ -35,7 +35,12 @@ namespace ColaConsultorio
         public void InsertarPaciente()
         {
             Random random = new Random();
+<<<<<<< HEAD
             int prioridad = random.Next(0, 6);
+=======
+            int prioridad = random.Next(0, 5);
+            int edad = random.Next(1, 100);
+>>>>>>> d2903c374903769cf5e0c0ef4aaa923b64c49c65
 
             Console.WriteLine("Ingrese los datos del Paciente ");
 

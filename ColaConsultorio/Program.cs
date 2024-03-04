@@ -6,6 +6,7 @@ namespace ColaConsultorio
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Hospital hospital = new Hospital();
             hospital.Menu();
 
@@ -39,6 +40,11 @@ namespace ColaConsultorio
             cola.Mostrar();
         */
         
+=======
+                Hospital consultorio = new Hospital();
+consultorio.Menu();
+Console.ReadKey();
+>>>>>>> d2903c374903769cf5e0c0ef4aaa923b64c49c65
         }
     }
 }
