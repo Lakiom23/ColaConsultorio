@@ -84,7 +84,27 @@ namespace ColaConsultorio
 
         public void GenerarReporte()
         {
+             ColaPacientes mostrarAux = new ColaPacientes(); 
 
+
+               for(int i= 0; Adultos[i].Pop() != null || i < 5; i++)
+                {
+                    while (Adultos[i].Pop() != null)
+                    {
+                        Adultos[i].Mostrar();
+                        mostrarAux.Push(Adultos[i].Pop());
+                        
+                    }
+                    while (mostrarAux.Pop() != null)
+                    {
+                        Adultos[i].Push(mostrarAux.Pop());
+
+                    }
+
+                }
+
+            
+            /*
             Console.WriteLine("REPORTE MEDICO ACTUAL");
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("Medico General");
@@ -116,7 +136,8 @@ namespace ColaConsultorio
                 if (i == 4) Console.WriteLine(" Consulta general ");
                 Ninios[i].Mostrar();
             }
-            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("-------------------------------------");*/
+            
         }
 
         public void Menu()
