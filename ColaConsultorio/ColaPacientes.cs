@@ -101,7 +101,7 @@ namespace ColaConsultorio
         public void Mostrar()
         {
             NodoPaciente nuevo = inicio;
-            if (Vacia())
+           /* if (Vacia())
             {
                 Console.WriteLine("Actualmente no hay pacientes en esta cola");
             }
@@ -109,7 +109,7 @@ namespace ColaConsultorio
             {
                 Console.WriteLine("Pacientes en cola ");
                 while (nuevo != null)
-                {
+                {*/
                     Console.WriteLine($"--------------------------------------");
                     Console.WriteLine($"Nombre : {nuevo.Paciente.Nombre} ");
                     Console.WriteLine($"Apellido : {nuevo.Paciente.Apellido} ");
@@ -117,8 +117,8 @@ namespace ColaConsultorio
                     Console.WriteLine($"Cedula : {nuevo.Paciente.Cedula} ");
                     Console.WriteLine($"--------------------------------------");
                     nuevo = nuevo.Siguiente;
-                }
-            }
+                //}
+            //}
         }
     }
 }
