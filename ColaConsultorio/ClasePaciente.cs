@@ -15,17 +15,17 @@ namespace ColaConsultorio
             get { return prioridad; }
             set { prioridad = value; }
         }
-        
-                public void MostrarDatos()
+
+        public void MostrarDatos()
         {
-            
-                    Console.WriteLine($"--------------------------------------");
-                    Console.WriteLine($"Nombre : {Nombre} ");
-                    Console.WriteLine($"Apellido : {Apellido} ");
-                    Console.WriteLine($"Edad : {Edad} ");
-                    Console.WriteLine($"Cedula : {Cedula} ");
-                    Console.WriteLine($"--------------------------------------");
-                    
+
+            Console.WriteLine($"--------------------------------------");
+            Console.WriteLine($"Nombre : {Nombre} ");
+            Console.WriteLine($"Apellido : {Apellido} ");
+            Console.WriteLine($"Edad : {Edad} ");
+            Console.WriteLine($"Cedula : {Cedula} ");
+            Console.WriteLine($"--------------------------------------");
+
         }
 
 

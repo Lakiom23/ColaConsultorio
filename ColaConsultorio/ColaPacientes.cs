@@ -97,28 +97,5 @@ namespace ColaConsultorio
             Contador--;
             return paciente;
         }
-
-        public void Mostrar()
-        {
-            NodoPaciente nuevo = inicio;
-           /* if (Vacia())
-            {
-                Console.WriteLine("Actualmente no hay pacientes en esta cola");
-            }
-            else
-            {
-                Console.WriteLine("Pacientes en cola ");
-                while (nuevo != null)
-                {*/
-                    Console.WriteLine($"--------------------------------------");
-                    Console.WriteLine($"Nombre : {nuevo.Paciente.Nombre} ");
-                    Console.WriteLine($"Apellido : {nuevo.Paciente.Apellido} ");
-                    Console.WriteLine($"Edad : {nuevo.Paciente.Edad} ");
-                    Console.WriteLine($"Cedula : {nuevo.Paciente.Cedula} ");
-                    Console.WriteLine($"--------------------------------------");
-                    nuevo = nuevo.Siguiente;
-                //}
-            //}
-        }
     }
 }

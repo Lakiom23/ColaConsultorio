@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace ColaConsultorio
 {
     //Class Hospital
@@ -15,13 +17,13 @@ namespace ColaConsultorio
             pediatra = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
             adultos = new ColaPacientes[5];
             ninios = new ColaPacientes[5];
-            
+
             for (int i = 0; i < 5; i++)
             {
                 adultos[i] = new ColaPacientes();
                 ninios[i] = new ColaPacientes();
             }
-            
+
         }
 
         //Getters y Setters
@@ -82,28 +84,77 @@ namespace ColaConsultorio
 
         }
 
+        public string Caso(int prioridad)
+        {
+            switch (prioridad)
+            {
+                case 0:
+                    return "Accidentes Aparatosos";
+                case 1:
+                    return "Infartos";
+                case 2:
+                    return "Afeccion Respiratoria";
+                case 3:
+                    return "Partos";
+                case 4:
+                    return "Consulta general";
+                default:
+                    return "Prioridad no válida";
+            }
+        }
+
         public void GenerarReporte()
         {
-             ColaPacientes mostrarAux = new ColaPacientes(); 
+            ColaPacientes colaAuxiliar = new ColaPacientes();
+            Paciente pacienteAuxiliar;
 
-
-               for(int i= 0; Adultos[i].Pop() != null || i < 5; i++)
+            for (int i = 0; i < 5; i++)
+            {
+                if (Ninios[i].Vacia())
                 {
-                    while (Adultos[i].Pop() != null)
+                    Console.WriteLine($"Vacia la cola de {Caso(i)}");
+                }
+                else
+                {
+                    while (!Ninios[i].Vacia())
                     {
-                        Adultos[i].Mostrar();
-                        mostrarAux.Push(Adultos[i].Pop());
-                        
+                        pacienteAuxiliar = Ninios[i].Pop();
+                        pacienteAuxiliar.MostrarDatos();
+                        colaAuxiliar.Push(pacienteAuxiliar);
                     }
-                    while (mostrarAux.Pop() != null)
+                    while (colaAuxiliar.Vacia())
                     {
-                        Adultos[i].Push(mostrarAux.Pop());
-
+                        Ninios[i].Push(colaAuxiliar.Pop());
                     }
-
                 }
 
+            }
             
+            for (int i = 0; i < 5; i++)
+            {
+                if (Adultos[i].Vacia())
+                {
+                    Console.WriteLine($"Vacia la cola de {Caso(i)}");
+                }
+                else
+                {
+                    while (!Adultos[i].Vacia())
+                    {
+                        pacienteAuxiliar = Adultos[i].Pop();
+                        pacienteAuxiliar.MostrarDatos();
+                        colaAuxiliar.Push(pacienteAuxiliar);
+                    }
+                    while (colaAuxiliar.Vacia())
+                    {
+                        Adultos[i].Push(colaAuxiliar.Pop());
+                    }
+                }
+
+            }
+
+
+
+
             /*
             Console.WriteLine("REPORTE MEDICO ACTUAL");
             Console.WriteLine("-------------------------------------");
@@ -137,7 +188,7 @@ namespace ColaConsultorio
                 Ninios[i].Mostrar();
             }
             Console.WriteLine("-------------------------------------");*/
-            
+
         }
 
         public void Menu()
