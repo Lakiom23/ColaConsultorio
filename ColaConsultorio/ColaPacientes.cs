@@ -85,11 +85,12 @@ namespace ColaConsultorio
         {
             if (Vacia())
             {
-                Console.WriteLine("La Cola esta vacia no hay nadie aquien atender ");
+                Console.WriteLine("La Cola esta vacia no hay nadie a quien atender ");
                 return null;
             }
-            // verificar si hace falata eliminar ya que no estoy seguro si se trabaja igual que con punteros
 
+            
+            // verificar si hace falata eliminar ya que no estoy seguro si se trabaja igual que con punteros
             Paciente paciente = Inicio.Paciente;
             Reorganizar();
 
