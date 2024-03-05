@@ -62,7 +62,6 @@ namespace ColaConsultorio
             {
                 inicio = nuevoPaciente;
                 fin = nuevoPaciente;
-                Console.WriteLine("Paciente agregado a la Cola");
                 return;
             }
             else

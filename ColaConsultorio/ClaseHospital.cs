@@ -36,8 +36,7 @@ namespace ColaConsultorio
 
         public void InsertarPaciente()
         {
-            Random random = new Random();
-            int prioridad = random.Next(0, 5);
+
 
 
             Console.WriteLine("Ingrese los datos del Paciente ");
@@ -54,15 +53,15 @@ namespace ColaConsultorio
             Console.WriteLine("Edad: ");
             int edad = Convert.ToInt32(Console.ReadLine());
 
-            Paciente pacienteNuevo = new Paciente(nombre, apellido, cedula, edad, prioridad);
+            Paciente pacienteNuevo = new Paciente(nombre, apellido, edad, cedula);
 
-            if (pacienteNuevo.Edad < 15)
+            if (pacienteNuevo.Edad <= 15)
             {
-                ninios[prioridad].Push(pacienteNuevo);
+                ninios[pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
             else
             {
-                adultos[prioridad].Push(pacienteNuevo);
+                adultos[pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
         }
 
@@ -83,6 +82,7 @@ namespace ColaConsultorio
             }
 
         }
+
 
         public string Caso(int prioridad)
         {
@@ -105,9 +105,18 @@ namespace ColaConsultorio
 
         public void GenerarReporte()
         {
+            Console.WriteLine("REPORTE MEDICO ACTUAL");
+            Console.WriteLine("|||||||||||||||||||||||||||||||||||||||");
+            Console.WriteLine("Medico General");
+            general.MostrarPaciente();
+            Console.WriteLine($"--------------------------------------");
+            Console.WriteLine("Medico Pediatra");
+            pediatra.MostrarPaciente();
+            Console.WriteLine($"||||||||||||||||||||||||||||||||||||||");
             ColaPacientes colaAuxiliar = new ColaPacientes();
             Paciente pacienteAuxiliar;
 
+            Console.WriteLine("COLAS DE NIÑOS");
             for (int i = 0; i < 5; i++)
             {
                 if (Ninios[i].Vacia())
@@ -116,6 +125,7 @@ namespace ColaConsultorio
                 }
                 else
                 {
+                    Console.WriteLine($"Pacientes en cola de {Caso(i)}");
                     while (!Ninios[i].Vacia())
                     {
                         pacienteAuxiliar = Ninios[i].Pop();
@@ -129,7 +139,9 @@ namespace ColaConsultorio
                 }
 
             }
-            
+
+            Console.WriteLine($"||||||||||||||||||||||||||||||||||||||");
+            Console.WriteLine("COLAS DE ADULTOS");
             for (int i = 0; i < 5; i++)
             {
                 if (Adultos[i].Vacia())
@@ -138,6 +150,7 @@ namespace ColaConsultorio
                 }
                 else
                 {
+                    Console.WriteLine($"Pacientes en cola de {Caso(i)}");
                     while (!Adultos[i].Vacia())
                     {
                         pacienteAuxiliar = Adultos[i].Pop();
@@ -149,51 +162,15 @@ namespace ColaConsultorio
                         Adultos[i].Push(colaAuxiliar.Pop());
                     }
                 }
-
             }
 
-
-
-
-            /*
-            Console.WriteLine("REPORTE MEDICO ACTUAL");
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("Medico General");
-            general.MostrarPaciente();
-            Console.WriteLine("Medico Pediatra");
-            pediatra.MostrarPaciente();
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("ADULTOS");
-
-            for (int i = 0; i < 5; i++)
-            {
-                
-                if (i == 0) Console.WriteLine(" Accidentes Aparatosos ");
-                if (i == 1) Console.WriteLine(" Infartos ");
-                if (i == 2) Console.WriteLine(" Afeccion Respiratoria ");
-                if (i == 3) Console.WriteLine(" Partos  ");
-                if (i == 4) Console.WriteLine(" Consulta general  ");
-                Adultos[i].Mostrar();
-
-            }
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("NIÑOS");
-            for (int i = 0; i < 5; i++)
-            {
-                if (i == 0) Console.WriteLine(" Accidentes Aparatosos ");
-                if (i == 1) Console.WriteLine(" Infartos ");
-                if (i == 2) Console.WriteLine(" Afeccion Respiratoria ");
-                if (i == 3) Console.WriteLine(" Partos ");
-                if (i == 4) Console.WriteLine(" Consulta general ");
-                Ninios[i].Mostrar();
-            }
-            Console.WriteLine("-------------------------------------");*/
+            Console.WriteLine($"||||||||||||||||||||||||||||||||||||||");
 
         }
 
         public void Menu()
         {
-            int opcion = 0;
+            string opcion = "0";
 
             do
             {
@@ -203,27 +180,28 @@ namespace ColaConsultorio
                 Console.WriteLine("3.Generar reporte ");
                 Console.WriteLine("4.CERRAR SISTEMA ");
 
-                opcion = Convert.ToByte(Console.ReadLine());
+                opcion = Console.ReadLine();
 
                 switch (opcion)
                 {
-                    case 1:
+                    case "1":
                         InsertarPaciente();
                         Console.ReadKey();
                         break;
 
-                    case 2:
+                    case "2":
                         AtenderPaciente();
                         Console.ReadKey();
                         break;
-
-                    case 3:
+                    case "3":
                         GenerarReporte();
                         Console.ReadKey();
                         break;
+                    default:
+                        break;
                 }
 
-            } while (opcion != 4);
+            } while (opcion != "4");
 
         }
 

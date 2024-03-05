@@ -5,9 +5,10 @@ namespace ColaConsultorio
     {
         private int prioridad;
 
-        public Paciente(string nombre, string apellido, int edad, int cedula, int prioridad) : base(nombre, apellido, edad, cedula)
+        public Paciente(string nombre, string apellido, int edad, int cedula) : base(nombre, apellido, edad, cedula)
         {
-            this.prioridad = prioridad;
+            Random random = new Random();
+            this.prioridad = random.Next(0, 5);
         }
 
         public int Prioridad
@@ -18,12 +19,11 @@ namespace ColaConsultorio
 
         public void MostrarDatos()
         {
-
             Console.WriteLine($"--------------------------------------");
-            Console.WriteLine($"Nombre : {Nombre} ");
-            Console.WriteLine($"Apellido : {Apellido} ");
-            Console.WriteLine($"Edad : {Edad} ");
-            Console.WriteLine($"Cedula : {Cedula} ");
+            Console.WriteLine($"   *Nombre : {Nombre} ");
+            Console.WriteLine($"    Apellido : {Apellido} ");
+            Console.WriteLine($"    Edad : {Edad} ");
+            Console.WriteLine($"    Cedula : {Cedula} ");
             Console.WriteLine($"--------------------------------------");
 
         }
