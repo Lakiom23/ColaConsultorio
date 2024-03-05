@@ -51,14 +51,8 @@ public class Medico : Persona
 
     public void MostrarPaciente()
     {
-        if (Paciente != null)
-        {
-            Console.WriteLine("Paciente siendo atendido ");
-            Console.WriteLine($"Nombre: {Paciente.Nombre} ");
-            Console.WriteLine($"Apellido: {Paciente.Apellido} ");
-            Console.WriteLine($"Edad: {Paciente.Edad} ");
-            Console.WriteLine($"C.I: {Paciente.Cedula} ");
-        }
+        if (Paciente != null)   Paciente.MostrarDatos();
+       
         else
         {
             Console.WriteLine("No hay paciente siendo atendido, el medico se encuentra disponible");
