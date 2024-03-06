@@ -84,16 +84,18 @@ namespace ColaConsultorio
         {
             medico[0].PacienteAtendido();
              medico[1].PacienteAtendido();
+            
+for (int i = 0;i < 2 ; i++)
+                {
+                    for (int j = 0; medico[i].Paciente == null || j < 5; i++)
+                        medico[i].AtenderPaciente(colaPacientes[i,j].Pop());
+                }
 
             /*
             general.PacienteAtendido();
             pediatra.PacienteAtendido();
 
-            for (int i = 0;i < 2 ; i++)
-                {
-                    for (int j = 0; medico[i].Paciente == null || j < 5; i++)
-                        medico[i].AtenderPaciente(colaPacientes[i,j].Pop());
-                }
+          
 
             for (int i = 0; general.Paciente == null || i < 5; i++)
             {
