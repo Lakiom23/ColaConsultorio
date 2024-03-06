@@ -41,7 +41,7 @@ namespace ColaConsultorio
         internal ColaPacientes[] Ninios { get => ninios; set => ninios = value; }*/
 
          internal Medico[] Medico { get => medico; set => medico = value; }
-          internal ColaPacientes[,] ColaPacientes { get => colaPacientes; set => colaPacientes = value; 
+          internal ColaPacientes[,] ColaPacientes { get => colaPacientes; set => colaPacientes = value; }
             
 
 
@@ -70,12 +70,12 @@ namespace ColaConsultorio
             if (pacienteNuevo.Edad <= 15)
             {
                 //ninios[pacienteNuevo.Prioridad].Push(pacienteNuevo);
-                colaPacientes[0,prioridad].Push(pacienteNuevo);
+                colaPacientes[0,pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
             else
             {
                 //adultos[pacienteNuevo.Prioridad].Push(pacienteNuevo);
-                colaPacientes[1,prioridad].Push(pacienteNuevo);
+                colaPacientes[1,pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
         }
 
