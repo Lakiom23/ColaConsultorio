@@ -35,7 +35,7 @@ namespace ColaConsultorio
         {
             inicio = null;
             fin = null;
-            tamanio = 10;
+            tamanio = 5;
             contador = 0;
         }
 
@@ -55,14 +55,14 @@ namespace ColaConsultorio
             NodoPaciente nuevoPaciente = new NodoPaciente(paciente);
             if (Llena())
             {
-                Console.WriteLine("Cola Llena, de momento no se puede ingresar mas pacientes en consultorio");
+                Console.WriteLine(" La Cola Llena, de momento no se puede ingresar mas pacientes ");
                 return;
             }
             if (Vacia())
             {
                 inicio = nuevoPaciente;
                 fin = nuevoPaciente;
-                return;
+                
             }
             else
             {
