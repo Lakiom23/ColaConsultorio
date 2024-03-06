@@ -5,10 +5,10 @@ namespace ColaConsultorio
     //Class Hospital
     public class Hospital
     {
-       /* private ColaPacientes[]? adultos;
-        private ColaPacientes[]? ninios;
-        private Medico? general;
-        private Medico? pediatra;*/
+        /* private ColaPacientes[]? adultos;
+         private ColaPacientes[]? ninios;
+         private Medico? general;
+         private Medico? pediatra;*/
 
         private ColaPacientes[,] colaPacientes;
         private Medico[] medico;
@@ -16,21 +16,21 @@ namespace ColaConsultorio
         //Constructor
         public Hospital()
         {
-               colaPacientes = new ColaPacientes[2, 5];
-                medico = new Medico[2];
-                medico[0] =  new Medico("Lenin", "Figeroa", 23, 23215546, "General");
-                medico[1] = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
+            colaPacientes = new ColaPacientes[2, 5];
+            medico = new Medico[2];
+            medico[0] = new Medico("Lenin", "Figeroa", 23, 23215546, "General");
+            medico[1] = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
 
-           /* general = new Medico("Lenin", "Figueroa", 23, 23215546, "General");
-            pediatra = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
-            adultos = new ColaPacientes[5];
-            ninios = new ColaPacientes[5];
+            /* general = new Medico("Lenin", "Figueroa", 23, 23215546, "General");
+             pediatra = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
+             adultos = new ColaPacientes[5];
+             ninios = new ColaPacientes[5];
 
-            for (int i = 0; i < 5; i++)
-            {
-                adultos[i] = new ColaPacientes();
-                ninios[i] = new ColaPacientes();
-            }*/
+             for (int i = 0; i < 5; i++)
+             {
+                 adultos[i] = new ColaPacientes();
+                 ninios[i] = new ColaPacientes();
+             }*/
 
         }
 
@@ -40,9 +40,9 @@ namespace ColaConsultorio
         internal ColaPacientes[] Adultos { get => adultos; set => adultos = value; }
         internal ColaPacientes[] Ninios { get => ninios; set => ninios = value; }*/
 
-         internal Medico[] Medico { get => medico; set => medico = value; }
-          internal ColaPacientes[,] ColaPacientes { get => colaPacientes; set => colaPacientes = value; }
-            
+        internal Medico[] Medico { get => medico; set => medico = value; }
+        internal ColaPacientes[,] ColaPacientes { get => colaPacientes; set => colaPacientes = value; }
+
 
 
 
@@ -70,12 +70,12 @@ namespace ColaConsultorio
             if (pacienteNuevo.Edad <= 15)
             {
                 //ninios[pacienteNuevo.Prioridad].Push(pacienteNuevo);
-                colaPacientes[0,pacienteNuevo.Prioridad].Push(pacienteNuevo);
+                colaPacientes[0, pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
             else
             {
                 //adultos[pacienteNuevo.Prioridad].Push(pacienteNuevo);
-                colaPacientes[1,pacienteNuevo.Prioridad].Push(pacienteNuevo);
+                colaPacientes[1, pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
         }
 
@@ -83,13 +83,13 @@ namespace ColaConsultorio
         public void AtenderPaciente()
         {
             medico[0].PacienteAtendido();
-             medico[1].PacienteAtendido();
-            
-for (int i = 0;i < 2 ; i++)
-                {
-                    for (int j = 0; medico[i].Paciente == null || j < 5; i++)
-                        medico[i].AtenderPaciente(colaPacientes[i,j].Pop());
-                }
+            medico[1].PacienteAtendido();
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; medico[i].Paciente == null || j < 5; i++)
+                    medico[i].AtenderPaciente(colaPacientes[i, j].Pop());
+            }
 
             /*
             general.PacienteAtendido();
@@ -144,33 +144,33 @@ for (int i = 0;i < 2 ; i++)
             ColaPacientes colaAuxiliar = new ColaPacientes();
             Paciente pacienteAuxiliar;
 
-            for(int i = 0; i < 2; i++)
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 5; j++)
                 {
-                    for (int j = 0; j < 5; j++)
+                    if (colaPacientes[i, j].Vacia())
                     {
-                        if (colaPacientes[i, j].Vacia())
-                        {
-                            Console.WriteLine($"Vacia la cola de {Caso(j)}");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Pacientes en cola de {Caso(j)}");
-                            while (!colaPacientes[i, j].Vacia())
-                            {
-                                pacienteAuxiliar = colaPacientes[i, j].Pop();
-                                pacienteAuxiliar.MostrarDatos();
-                                colaAuxiliar.Push(pacienteAuxiliar);
-                            }
-                            while (colaAuxiliar.Vacia())
-                            {
-                                colaPacientes[i, j].Push(colaAuxiliar.Pop());
-                            }
-                        }
-
+                        Console.WriteLine($"Vacia la cola de {Caso(j)}");
                     }
-                }
+                    else
+                    {
+                        Console.WriteLine($"Pacientes en cola de {Caso(j)}");
+                        while (!colaPacientes[i, j].Vacia())
+                        {
+                            pacienteAuxiliar = colaPacientes[i, j].Pop();
+                            pacienteAuxiliar.MostrarDatos();
+                            colaAuxiliar.Push(pacienteAuxiliar);
+                        }
+                        while (colaAuxiliar.Vacia())
+                        {
+                            colaPacientes[i, j].Push(colaAuxiliar.Pop());
+                        }
+                    }
 
-            
+                }
+            }
+
+
 
             /*
 
