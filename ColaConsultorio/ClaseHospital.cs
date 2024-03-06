@@ -108,8 +108,10 @@ namespace ColaConsultorio
 
             for (int i = 0; i < 2; i++)
             {
-                for (int j = 0; medico[i].Paciente == null || j < 5; j++) {
-                    medico[i].AtenderPaciente(colaPacientes[i, j].Pop()); }
+                for (int j = 0; medico[i].Paciente == null && j < 5; j++) {
+                    if(!colaPacientes[i, j].Vacía()){medico[i].AtenderPaciente(colaPacientes[i, j].Pop());
+}
+ }
 
             }
 
