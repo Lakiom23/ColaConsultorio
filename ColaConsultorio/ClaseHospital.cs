@@ -5,15 +5,6 @@ namespace ColaConsultorio
     //Class Hospital
     public class Hospital
     {
-        /* private ColaPacientes[]? adultos;
-         private ColaPacientes[]? ninios;
-         private Medico? general;
-         private Medico? pediatra;*/
-               /* private ColaPacientes[]? adultos;
-        private ColaPacientes[]? ninios;
-        private Medico? general;
-        private Medico? pediatra;*/
-
         private ColaPacientes[,] colaPacientes;
         private Medico[] medico;
 
@@ -21,54 +12,27 @@ namespace ColaConsultorio
         public Hospital()
         {
             colaPacientes = new ColaPacientes[2, 5];
-            for(int i = 0 ; i< 2; i++){
+            for (int i = 0; i < 2; i++)
+            {
                 for (int j = 0; j < 5; j++)
                 {
-                    colaPacientes[i,j] = new ColaPacientes();
+                    colaPacientes[i, j] = new ColaPacientes();
 
                 }
 
             }
 
-
             medico = new Medico[2];
             medico[0] = new Medico("Lenin", "Figeroa", 23, 23215546, "General");
             medico[1] = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
 
-            /* general = new Medico("Lenin", "Figueroa", 23, 23215546, "General");
-             pediatra = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
-             adultos = new ColaPacientes[5];
-             ninios = new ColaPacientes[5];
-
-             for (int i = 0; i < 5; i++)
-             {
-                 adultos[i] = new ColaPacientes();
-                 ninios[i] = new ColaPacientes();
-             }*/
-
         }
-
-        //Getters y Setters
-        /*internal Medico General { get => general; set => general = value; }
-        internal Medico Pediatra { get => pediatra; set => pediatra = value; }
-        internal ColaPacientes[] Adultos { get => adultos; set => adultos = value; }
-        internal ColaPacientes[] Ninios { get => ninios; set => ninios = value; }*/
 
         internal Medico[] Medico { get => medico; set => medico = value; }
         internal ColaPacientes[,] ColaPacientes { get => colaPacientes; set => colaPacientes = value; }
 
-        internal Medico[] Medico { get => medico; set => medico = value; }
-        internal ColaPacientes[,] ColaPacientes{ get => colaPacientes; set => colaPacientes = value;}
-
-
-
-
-
         public void InsertarPaciente()
         {
-
-
-
             Console.WriteLine("Ingrese los datos del Paciente ");
 
             Console.WriteLine("Nombre: ");
@@ -77,11 +41,35 @@ namespace ColaConsultorio
             Console.WriteLine("Apellido: ");
             string apellido = Console.ReadLine();
 
-            Console.WriteLine("Cedula: ");
-            int cedula = Convert.ToInt32(Console.ReadLine());
+            int cedula;
+            bool cedulaValida = false;
+            do
+            {
+                Console.WriteLine("Cedula: ");
+                if (int.TryParse(Console.ReadLine(), out cedula))
+                {
+                    cedulaValida = true;
+                }
+                else
+                {
+                    Console.WriteLine("Por favor ingrese un número válido para la cédula.");
+                }
+            } while (!cedulaValida);
 
-            Console.WriteLine("Edad: ");
-            int edad = Convert.ToInt32(Console.ReadLine());
+            int edad;
+            bool edadValida = false;
+            do
+            {
+                Console.WriteLine("Edad: ");
+                if (int.TryParse(Console.ReadLine(), out edad))
+                {
+                    edadValida = true;
+                }
+                else
+                {
+                    Console.WriteLine("Por favor ingrese un número válido para la edad.");
+                }
+            } while (!edadValida);
 
             Paciente pacienteNuevo = new Paciente(nombre, apellido, edad, cedula);
 
@@ -108,10 +96,13 @@ namespace ColaConsultorio
 
             for (int i = 0; i < 2; i++)
             {
-                for (int j = 0; medico[i].Paciente == null && j < 5; j++) {
-                    if(!colaPacientes[i, j].Vacía()){medico[i].AtenderPaciente(colaPacientes[i, j].Pop());
-}
- }
+                for (int j = 0; medico[i].Paciente == null && j < 5; j++)
+                {
+                    if (!colaPacientes[i, j].Vacia())
+                    {
+                        medico[i].AtenderPaciente(colaPacientes[i, j].Pop());
+                    }
+                }
 
             }
 
@@ -169,7 +160,7 @@ namespace ColaConsultorio
 
             for (int i = 0; i < 2; i++)
             {
-                if(i == 0) Console.WriteLine("COLAS DE NIÑOS \n");
+                if (i == 0) Console.WriteLine("COLAS DE NIÑOS \n");
                 else Console.WriteLine("COLAS DE ADULTOS \n ");
 
                 for (int j = 0; j < 5; j++)
