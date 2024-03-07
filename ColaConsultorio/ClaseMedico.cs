@@ -27,8 +27,10 @@ public class Medico : Persona
     {
         if (this.paciente == null)
         {
-            this.paciente = paciente;
-            Console.WriteLine("Paciente ha entrado al consultorio");
+                this.paciente = paciente;
+                Console.WriteLine("Paciente :");
+                paciente.MostrarDatos();
+
         }
         else
         {
@@ -40,12 +42,13 @@ public class Medico : Persona
     {
         if (this.paciente != null)
         {
-            this.paciente = null;
-            Console.WriteLine("Paciente ha sido atendido, medico disponible");
+           Console.WriteLine("Datos Del Paciente Atendido : ");
+           paciente.MostrarDatos();
+           this.paciente = null;
         }
         else
         {
-            Console.WriteLine("No hay paciente siendo atendido, el medico se encuentra disponible");
+            Console.WriteLine("No hay paciente siendo atendido");
         }
     }
 
