@@ -77,12 +77,10 @@ namespace ColaConsultorio
 
             if (pacienteNuevo.Edad <= 15)
             {
-                //ninios[pacienteNuevo.Prioridad].Push(pacienteNuevo);
                 colaPacientes[0, pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
             else
             {
-                //adultos[pacienteNuevo.Prioridad].Push(pacienteNuevo);
                 colaPacientes[1, pacienteNuevo.Prioridad].Push(pacienteNuevo);
             }
         }
@@ -90,37 +88,27 @@ namespace ColaConsultorio
 
         public void AtenderPaciente()
         {
-            medico[0].PacienteAtendido();
-            medico[1].PacienteAtendido();
-
-
             for (int i = 0; i < 2; i++)
             {
+                Console.WriteLine(CasoMedicos(i));
+
+                medico[i].PacienteAtendido();
+                Console.WriteLine("\n --------------------------------------\n ");
                 for (int j = 0; medico[i].Paciente == null && j < 5; j++)
                 {
-                    if (!colaPacientes[i, j].Vacia())
-                    {
+                    if (!colaPacientes[i, j].Vacia()) {
+                        
                         medico[i].AtenderPaciente(colaPacientes[i, j].Pop());
+                        Console.WriteLine($"Paciente entro a consulta por {Caso(j)}");
+                        Console.WriteLine("\n --------------------------------------\n ");
+
                     }
+                 
                 }
+             }   
+                
 
-            }
-
-            /*
-            general.PacienteAtendido();
-            pediatra.PacienteAtendido();
-
-
-            for (int i = 0; general.Paciente == null || i < 5; i++)
-            {
-                general.AtenderPaciente(Adultos[i].Pop());
-            }
-
-            for (int i = 0; pediatra.Paciente == null || i < 5; i++)
-            {
-                pediatra.AtenderPaciente(Ninios[i].Pop());
-            }
-*/
+           
         }
 
 
@@ -143,25 +131,40 @@ namespace ColaConsultorio
             }
         }
 
+         public string CasoMedicos(int tipoDeMedico)
+        {
+            switch (tipoDeMedico)
+            {
+                case 0:
+                    return "MEDICO DE PEDIATRIA \n";
+                case 1:
+                    return "MEDICO GENERAL \n";
+                default:
+                    return "Medico no encontrado";
+            }
+
+        }
+
         public void GenerarReporte()
         {
             Console.WriteLine("REPORTE MEDICO ACTUAL");
             Console.WriteLine("|||||||||||||||||||||||||||||||||||||||\n");
-            Console.WriteLine("Medico Pediatra");
-            //general.MostrarPaciente();
-            medico[0].MostrarPaciente();
-            Console.WriteLine($"--------------------------------------\n ");
-            Console.WriteLine("Medico General ");
-            //pediatra.MostrarPaciente();
-            medico[1].MostrarPaciente();
-            Console.WriteLine($"|||||||||||||||||||||||||||||||||||||| \n");
+            for (int i = 0; i < 2; i++)
+            {    
+               Console.WriteLine(CasoMedicos(i)) ;
+                medico[i].MostrarPaciente();
+                Console.WriteLine("--------------------------------------\n ");
+            }
+            Console.WriteLine("|||||||||||||||||||||||||||||||||||||| \n");
+
+
+
             ColaPacientes colaAuxiliar = new ColaPacientes();
             Paciente pacienteAuxiliar;
 
             for (int i = 0; i < 2; i++)
             {
-                if (i == 0) Console.WriteLine("COLAS DE NIÑOS \n");
-                else Console.WriteLine("COLAS DE ADULTOS \n ");
+                Console.WriteLine(CasoMedicos(i));
 
                 for (int j = 0; j < 5; j++)
                 {
@@ -186,61 +189,7 @@ namespace ColaConsultorio
 
                 }
             }
-
-
-
-            /*
-
-            Console.WriteLine("COLAS DE NIÑOS");
-            for (int i = 0; i < 5; i++)
-            {
-                if (Ninios[i].Vacia())
-                {
-                    Console.WriteLine($"Vacia la cola de {Caso(i)}");
-                }
-                else
-                {
-                    Console.WriteLine($"Pacientes en cola de {Caso(i)}");
-                    while (!Ninios[i].Vacia())
-                    {
-                        pacienteAuxiliar = Ninios[i].Pop();
-                        pacienteAuxiliar.MostrarDatos();
-                        colaAuxiliar.Push(pacienteAuxiliar);
-                    }
-                    while (colaAuxiliar.Vacia())
-                    {
-                        Ninios[i].Push(colaAuxiliar.Pop());
-                    }
-                }
-
-            }
-
-            Console.WriteLine($"||||||||||||||||||||||||||||||||||||||");
-            Console.WriteLine("COLAS DE ADULTOS");
-            for (int i = 0; i < 5; i++)
-            {
-                if (Adultos[i].Vacia())
-                {
-                    Console.WriteLine($"Vacia la cola de {Caso(i)}");
-                }
-                else
-                {
-                    Console.WriteLine($"Pacientes en cola de {Caso(i)}");
-                    while (!Adultos[i].Vacia())
-                    {
-                        pacienteAuxiliar = Adultos[i].Pop();
-                        pacienteAuxiliar.MostrarDatos();
-                        colaAuxiliar.Push(pacienteAuxiliar);
-                    }
-                    while (colaAuxiliar.Vacia())
-                    {
-                        Adultos[i].Push(colaAuxiliar.Pop());
-                    }
-                }
-            }
-
-            Console.WriteLine($"||||||||||||||||||||||||||||||||||||||");
-*/
+          
         }
 
         public void Menu()
