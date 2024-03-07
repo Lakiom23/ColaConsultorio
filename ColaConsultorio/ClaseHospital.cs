@@ -23,8 +23,8 @@ namespace ColaConsultorio
             }
 
             medico = new Medico[2];
-            medico[0] = new Medico("Lenin", "Figeroa", 23, 23215546, "General");
-            medico[1] = new Medico("Maikol", "Penia", 23, 27275746, "Pediatria");
+            medico[0] = new Medico("Lenin", "Figueroa", 23, 23215546, "PEDIATRA");
+            medico[1] = new Medico("Maikol", "Penia", 23, 27275746, "GENERAL");
 
         }
 
@@ -90,25 +90,23 @@ namespace ColaConsultorio
         {
             for (int i = 0; i < 2; i++)
             {
-                Console.WriteLine(CasoMedicos(i));
+                Console.WriteLine($"MEDICO {medico[i].Especialidad}");
 
                 medico[i].PacienteAtendido();
                 Console.WriteLine("\n --------------------------------------\n ");
                 for (int j = 0; medico[i].Paciente == null && j < 5; j++)
                 {
-                    if (!colaPacientes[i, j].Vacia()) {
-                        
+                    if (!colaPacientes[i, j].Vacia())
+                    {
+
                         medico[i].AtenderPaciente(colaPacientes[i, j].Pop());
                         Console.WriteLine($"Paciente entro a consulta por {Caso(j)}");
                         Console.WriteLine("\n --------------------------------------\n ");
 
                     }
-                 
-                }
-             }   
-                
 
-           
+                }
+            }
         }
 
 
@@ -131,40 +129,25 @@ namespace ColaConsultorio
             }
         }
 
-         public string CasoMedicos(int tipoDeMedico)
-        {
-            switch (tipoDeMedico)
-            {
-                case 0:
-                    return "MEDICO DE PEDIATRIA \n";
-                case 1:
-                    return "MEDICO GENERAL \n";
-                default:
-                    return "Medico no encontrado";
-            }
-
-        }
 
         public void GenerarReporte()
         {
             Console.WriteLine("REPORTE MEDICO ACTUAL");
             Console.WriteLine("|||||||||||||||||||||||||||||||||||||||\n");
             for (int i = 0; i < 2; i++)
-            {    
-               Console.WriteLine(CasoMedicos(i)) ;
+            {
+                Console.WriteLine($"MEDICO {medico[i].Nombre} {medico[i].Apellido} ({medico[i].Especialidad})");
                 medico[i].MostrarPaciente();
                 Console.WriteLine("--------------------------------------\n ");
             }
             Console.WriteLine("|||||||||||||||||||||||||||||||||||||| \n");
-
-
 
             ColaPacientes colaAuxiliar = new ColaPacientes();
             Paciente pacienteAuxiliar;
 
             for (int i = 0; i < 2; i++)
             {
-                Console.WriteLine(CasoMedicos(i));
+                Console.WriteLine($"COLA {medico[i].Especialidad}");
 
                 for (int j = 0; j < 5; j++)
                 {
@@ -189,13 +172,12 @@ namespace ColaConsultorio
 
                 }
             }
-          
+
         }
 
         public void Menu()
         {
             string opcion = "0";
-
             do
             {
                 Console.WriteLine("Consultorio medico ");
@@ -214,13 +196,11 @@ namespace ColaConsultorio
                         Console.ReadKey();
                         Console.Clear();
                         break;
-
                     case "2":
                         AtenderPaciente();
                         Console.ReadKey();
                         Console.Clear();
                         break;
-
                     case "3":
                         GenerarReporte();
                         Console.ReadKey();
@@ -230,10 +210,7 @@ namespace ColaConsultorio
                         Console.WriteLine("Por Favor ingrese una Opcion validad");
                         break;
                 }
-
             } while (opcion != "4");
-
         }
-
     }
 }
